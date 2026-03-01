@@ -20,7 +20,7 @@ namespace StatusTracking.Models
         public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedDate { get; set; } = DateTime.UtcNow;
 
-        public string? AssignedToUserId { get; set; }
+        public int? AssignedToUserId { get; set; }
 
         [ForeignKey("AssignedToUserId")]
         public ApplicationUser? AssignedToUser { get; set; }

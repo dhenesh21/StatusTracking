@@ -6,7 +6,7 @@ using StatusTracking.Models;
 
 namespace StatusTracking.Data
 {
-    public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole, string>
+    public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole<int>, int>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options)
     : base(options) { }
