@@ -1,10 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using StatusTracking.Models;
 
 
 namespace StatusTracking.Data
 {
-    public class AppDbContext : DbContext 
+    public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole, string>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options)
     : base(options) { }
