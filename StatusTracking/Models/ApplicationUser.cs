@@ -1,6 +1,8 @@
-﻿namespace StatusTracking.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace StatusTracking.Models
 {
-    public class ApplicationUser
+    public class ApplicationUser : IdentityUser
     {
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
